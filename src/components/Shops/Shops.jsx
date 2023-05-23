@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { Link, P, GitLink } from "./Shops.styled";
-import { getGoods } from "../../services/getGoods";
+import { getGoods, addToBasket } from "../../services";
 
 const Shops = () => {
   const [goods, setGoods] = useState([]);
@@ -75,7 +75,7 @@ const Shops = () => {
             <div key={good._id}>
               <p>{good.titel}</p>
               <p>{good.price}</p>
-              <button type="button" onClick={() => loadGoods("sushiAbw")}>
+              <button type="button" onClick={() => addToBasket(good)}>
                 add to Cart
               </button>
             </div>

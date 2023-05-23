@@ -2,13 +2,24 @@ import React from "react";
 import { Link, P, GitLink } from "./ShoppingCart.styled";
 
 const ShopingCart = () => {
+  const arrayGoods = JSON.parse(localStorage.getItem("basket")) || [];
   return (
-    <div style={{ textAlign: "center" }}>
-      <Link to="/tweets">Welcome! Y</Link>
-      <P style={{ marginTop: "20px" }}>I am the developer of this website.</P>
-      <GitLink href="https://github.com/OPaslavskiy"></GitLink>
-      <P>I hope you enjoy using it!</P>
-    </div>
+    <>
+      <div></div>
+      <div>
+        {arrayGoods.length ? (
+          arrayGoods.map((good) => (
+            <div key={good._id}>
+              <p>{good.titel}</p>
+              <p>{good.price}</p>
+              <input type="number" min="0" defaultValue="1" />
+            </div>
+          ))
+        ) : (
+          <p>The Basket is empty.</p>
+        )}
+      </div>
+    </>
   );
 };
 
