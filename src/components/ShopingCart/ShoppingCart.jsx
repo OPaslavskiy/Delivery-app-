@@ -19,8 +19,8 @@ const ShopingCart = () => {
         />
       </div>
       <div>
-        {arrayGoods.length ? (
-          arrayGoods.map((good) => (
+        {arrayGoods?.length ? (
+          arrayGoods?.map((good) => (
             <div key={good._id}>
               <img
                 src={good.image}

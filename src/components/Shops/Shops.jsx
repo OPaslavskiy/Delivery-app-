@@ -45,24 +45,21 @@ const Shops = () => {
         <ButtonList loadGoods={loadGoods} />
       </div>
       <div>
-        {goods.map((good) => {
-          console.log(good.image);
-          return (
-            <div key={good._id}>
-              <p>{good.titel}</p>
-              <img
-                src={good.image}
-                alt=""
-                width={150}
-                height={80}
-                object-fit={"cover"}
-              />
-              <button type="button" onClick={() => addToBasket(good)}>
-                add to Cart
-              </button>
-            </div>
-          );
-        })}
+        {goods.map((good) => (
+          <div key={good._id}>
+            <p>{good.titel}</p>
+            <img
+              src={good.image}
+              alt=""
+              width={150}
+              height={80}
+              object-fit={"cover"}
+            />
+            <button type="button" onClick={() => addToBasket(good)}>
+              add to Cart
+            </button>
+          </div>
+        ))}
       </div>
     </>
   );
