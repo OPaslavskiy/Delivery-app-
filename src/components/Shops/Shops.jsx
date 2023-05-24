@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import { Link, P, GitLink } from "./Shops.styled";
 import { getGoods, addToBasket } from "../../services";
+import ButtonList from "../ButtonList/ButtonList";
 
 const Shops = () => {
   const [goods, setGoods] = useState([]);
@@ -41,40 +42,21 @@ const Shops = () => {
     <>
       <div>
         <p>Shops:</p>
-        <ul>
-          <li>
-            <button type="button" onClick={() => loadGoods("mcduck")}>
-              Mc' Duck
-            </button>
-          </li>
-          <li>
-            <button type="button" onClick={() => loadGoods("theshaurma")}>
-              The Shaurma
-            </button>
-          </li>
-          <li>
-            <button type="button" onClick={() => loadGoods("elari")}>
-              Elari Caffee
-            </button>
-          </li>
-          <li>
-            <button type="button" onClick={() => loadGoods("faina")}>
-              Faina Pizza
-            </button>
-          </li>
-          <li>
-            <button type="button" onClick={() => loadGoods("sushiabw")}>
-              Sushi ABW
-            </button>
-          </li>
-        </ul>
+        <ButtonList loadGoods={loadGoods} />
       </div>
       <div>
         {goods.map((good) => {
+          console.log(good.image);
           return (
             <div key={good._id}>
               <p>{good.titel}</p>
-              <p>{good.price}</p>
+              <img
+                src={good.image}
+                alt=""
+                width={150}
+                height={80}
+                object-fit={"cover"}
+              />
               <button type="button" onClick={() => addToBasket(good)}>
                 add to Cart
               </button>
