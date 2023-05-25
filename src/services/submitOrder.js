@@ -21,5 +21,6 @@ export const submitOrder = (order, contactInfo, setOrder, setContactInfo) => {
     });
 
     putOrder(orderForm);
+    localStorage.removeItem("basket");
   }
 };

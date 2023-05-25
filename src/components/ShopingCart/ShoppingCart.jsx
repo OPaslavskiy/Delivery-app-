@@ -20,12 +20,17 @@ const ShopingCart = () => {
 
   return (
     <>
-      <div>
-        <ContactInfo
-          contactInfo={contactInfo}
-          setContactInfo={setContactInfo}
-        />
-      </div>
+      {order.length ? (
+        <div>
+          <ContactInfo
+            contactInfo={contactInfo}
+            setContactInfo={setContactInfo}
+          />
+        </div>
+      ) : (
+        <></>
+      )}
+
       <div>
         {order.length ? (
           order.map((good) => (
