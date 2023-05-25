@@ -35,13 +35,7 @@ const ShopingCart = () => {
         {order.length ? (
           order.map((good) => (
             <div key={good._id}>
-              <img
-                src={good.image}
-                alt=""
-                width={250}
-                height={180}
-                objectFit={"cover"}
-              />
+              <img src={good.image} alt="" width={250} height={180} />
               <p>{good.titel}</p>
               <p>Price {good.price} UAH</p>
               <input
@@ -56,7 +50,7 @@ const ShopingCart = () => {
             </div>
           ))
         ) : (
-          <p>The Basket is empty.</p>
+          <p>The Cart is empty.</p>
         )}
       </div>
 

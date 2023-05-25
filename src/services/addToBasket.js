@@ -17,11 +17,11 @@ export function addToBasket(good) {
     if (!isInBasket) {
       arrayGoods.push(newGoods);
       Notiflix.Notify.success(
-        "Excellent choice. The item has been added to your basket."
+        "Excellent choice. The item has been added to your cart."
       );
     } else
       Notiflix.Notify.info(
-        "This item is already waiting for you in your basket."
+        "This item is already waiting for you in your cart."
       );
   } else arrayGoods.push(newGoods);
 

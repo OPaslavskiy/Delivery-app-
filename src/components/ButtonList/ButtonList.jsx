@@ -12,9 +12,8 @@ const ButtonList = ({ loadGoods }) => {
   return (
     <ul>
       {buttons.map((button, index) => (
-        <li>
+        <li key={button}>
           <button
-            key={index}
             onClick={() => {
               handleClick(index, button);
             }}

@@ -47,13 +47,7 @@ const Shops = () => {
         {goods?.map((good) => (
           <div key={good._id}>
             <p>{good.titel}</p>
-            <img
-              src={good.image}
-              alt=""
-              width={150}
-              height={80}
-              object-fit={"cover"}
-            />
+            <img src={good.image} alt="" width={150} height={80} />
             <button type="button" onClick={() => addToBasket(good)}>
               add to Cart
             </button>
