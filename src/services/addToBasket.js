@@ -1,7 +1,3 @@
-import axios from "axios";
-
-axios.defaults.baseURL = "https://delivery-app-vnwc.onrender.com/api/";
-
 export function addToBasket(good) {
   const arrayGoods = JSON.parse(localStorage.getItem("basket")) || [];
   const newGoods = good;

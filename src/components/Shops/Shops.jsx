@@ -45,7 +45,7 @@ const Shops = () => {
         <ButtonList loadGoods={loadGoods} />
       </div>
       <div>
-        {goods.map((good) => (
+        {goods?.map((good) => (
           <div key={good._id}>
             <p>{good.titel}</p>
             <img

@@ -12,17 +12,15 @@ export const ContactInfo = ({ contactInfo, setContactInfo }) => {
 
   return (
     <>
-      <form>
-        {Object.keys(contactInfo).map((item) => (
-          <Input
-            key={item}
-            item={item}
-            handleChange={handleChange}
-            contactInfo={contactInfo}
-            setContactInfo={setContactInfo}
-          />
-        ))}
-      </form>
+      {Object.keys(contactInfo).map((item) => (
+        <Input
+          key={item}
+          item={item}
+          handleChange={handleChange}
+          contactInfo={contactInfo}
+          setContactInfo={setContactInfo}
+        />
+      ))}
     </>
   );
 };

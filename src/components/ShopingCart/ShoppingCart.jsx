@@ -19,7 +19,7 @@ const ShopingCart = () => {
   }, 0);
 
   return (
-    <>
+    <form>
       {order.length ? (
         <div>
           <ContactInfo
@@ -80,7 +80,7 @@ const ShopingCart = () => {
       ) : (
         <></>
       )}
-    </>
+    </form>
   );
 };
 
