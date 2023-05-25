@@ -1,5 +1,3 @@
-import { Outlet } from "react-router-dom";
-
 import { Header, LogoLink } from "./AppBar.styled";
 
 export const AppBar = () => {

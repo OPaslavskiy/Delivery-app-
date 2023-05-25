@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ContactInfo } from "../ContactInfo/ContactInfo";
 import { handleQuantityChange } from "../../services/handleQuantityChange";
 import { submitOrder } from "../../services/submitOrder";

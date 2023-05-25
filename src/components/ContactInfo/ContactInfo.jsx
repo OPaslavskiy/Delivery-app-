@@ -1,6 +1,5 @@
 import React from "react";
 import { Input } from "../Input/Input";
-// import { Header, LogoLink } from "./AppBar.styled";
 
 export const ContactInfo = ({ contactInfo, setContactInfo }) => {
   const handleChange = ({ target: { name, value } }) => {

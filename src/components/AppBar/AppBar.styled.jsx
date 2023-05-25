@@ -49,9 +49,6 @@ export const LogoLink = styled(NavLink)`
   font-weight: bold;
   margin-left: 14px;
   line-height: 1.2;
-  &.active {
-    color: #1976d2;
-  }
 
   &:hover,
   &:focus {

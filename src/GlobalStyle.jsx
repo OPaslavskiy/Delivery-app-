@@ -34,6 +34,5 @@ ol {
 }
 img {
   display: block;
-
 }
 `;
