@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import { getGoods, addToBasket } from "../../services";
 import ButtonList from "../ButtonList/ButtonList";
+import {
+  Conteiner,
+  ShopsItem,
+  TitleShops,
+  GoodsList,
+  GoodItem,
+  Image,
+  GoodName,
+  GoodButton,
+} from "./Shops.styled";
 
 const Shops = () => {
   const [goods, setGoods] = useState([]);
@@ -38,23 +48,23 @@ const Shops = () => {
   }
 
   return (
-    <>
-      <div>
-        <p>Shops:</p>
+    <Conteiner>
+      <ShopsItem>
+        <TitleShops>Shops:</TitleShops>
         <ButtonList loadGoods={loadGoods} />
-      </div>
-      <div>
+      </ShopsItem>
+      <GoodsList>
         {goods?.map((good) => (
-          <div key={good._id}>
-            <p>{good.titel}</p>
-            <img src={good.image} alt="" width={150} height={80} />
-            <button type="button" onClick={() => addToBasket(good)}>
+          <GoodItem key={good._id}>
+            <Image src={good.image} alt={good.titel} />
+            <GoodName>{good.titel}</GoodName>
+            <GoodButton type="button" onClick={() => addToBasket(good)}>
               add to Cart
-            </button>
-          </div>
+            </GoodButton>
+          </GoodItem>
         ))}
-      </div>
-    </>
+      </GoodsList>
+    </Conteiner>
   );
 };
 
