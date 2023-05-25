@@ -16,6 +16,7 @@ import {
   InfoDiv,
   Price,
   TotalPrice,
+  Empty,
 } from "./ShopingCart.styled";
 
 const ShopingCart = () => {
@@ -68,7 +69,7 @@ const ShopingCart = () => {
               </GoodItem>
             ))
           ) : (
-            <p>The Cart is empty.</p>
+            <Empty>The Cart is empty.</Empty>
           )}
         </OrderList>
       </SubmitConeiner>

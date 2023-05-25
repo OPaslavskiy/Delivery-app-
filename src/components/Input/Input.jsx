@@ -1,9 +1,10 @@
 import React from "react";
+import { InputP, Label } from "./Input.styled";
 
 export const Input = ({ item, handleChange, contactInfo }) => (
   <>
-    <label htmlFor={item}>{item}</label>
-    <input
+    <Label htmlFor={item}>{item}</Label>
+    <InputP
       type={item === "email" ? "email" : "text"}
       id={item}
       name={item}

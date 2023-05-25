@@ -26,8 +26,8 @@ export const OrderList = styled.ul`
 export const ConteinerContacts = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 60px;
+
+  gap: 18px;
   border: 1px solid #5f4699;
   border-radius: 8px;
   padding: 28px;
@@ -113,4 +113,12 @@ export const Price = styled.p`
 
 export const TotalPrice = styled.p`
   font-size: 22px;
+`;
+
+export const Empty = styled.p`
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+  text-align: center;
 `;

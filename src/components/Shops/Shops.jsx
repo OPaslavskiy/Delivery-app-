@@ -66,7 +66,7 @@ const Shops = () => {
             </GoodItem>
           ))
         ) : (
-          <Greeting>Choose a store to order delicious food.</Greeting>
+          <Greeting>Welcome! Choose a store to order delicious food.</Greeting>
         )}
       </GoodsList>
     </Conteiner>
