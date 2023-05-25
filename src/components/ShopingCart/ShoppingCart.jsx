@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ContactInfo } from "../ContactInfo/ContactInfo";
-import { handleQuantityChange } from "../../services/handleQuantityChange";
-import { submitOrder } from "../../services/submitOrder";
+import { handleQuantityChange } from "../../services/";
+import { submitOrder } from "../../services";
 
 const ShopingCart = () => {
   const arrayGoods = JSON.parse(localStorage.getItem("basket")) || [];

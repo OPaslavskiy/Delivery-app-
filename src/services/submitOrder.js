@@ -1,4 +1,11 @@
-import { putOrder } from "../services/putOrder";
+import { putOrder } from "../services/";
+import Notiflix from "notiflix";
+
+Notiflix.Notify.init({
+  width: "380px",
+  position: "center-top",
+});
+
 export const submitOrder = (
   order,
   contactInfo,
@@ -12,7 +19,7 @@ export const submitOrder = (
   }
 
   if (arreyKeys.some((value) => value === "")) {
-    console.log(`1111111111111111111111`);
+    Notiflix.Notify.warning("Please fill in the empty fields.");
   } else {
     const orderForm = {
       ...contactInfo,
