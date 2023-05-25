@@ -7,6 +7,9 @@ export const Header = styled.header`
   justify-content: flex-start;
   padding-left: 64px;
   padding-right: 64px;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background: linear-gradient(
     114.99deg,
     #c1b9d4 -0.99%,
