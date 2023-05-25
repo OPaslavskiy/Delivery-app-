@@ -1,4 +1,4 @@
-import{i as e,j as t,r as l}from"./index-9114de9b.js";import{s as x}from"./submitOrder-01f4608a.js";const c=(i,r,s,o)=>{const{value:a}=i.target,p=s.map(n=>n.titel===r?{...n,quantity:a}:{...n,quantity:1}).filter(n=>n.quantity!=="0");o(p)},u=e.input`
+import{i as e,j as t,r as l}from"./index-620ad134.js";import{s as x}from"./submitOrder-6f790ee5.js";const c=(i,r,s,o)=>{const{value:a}=i.target,p=s.map(n=>n.titel===r?{...n,quantity:a}:{...n,quantity:1}).filter(n=>n.quantity!=="0");o(p)},u=e.input`
   width: 100%;
   padding: 8px 12px;
   font-size: 14px;
