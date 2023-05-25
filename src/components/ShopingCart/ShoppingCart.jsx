@@ -10,6 +10,12 @@ import {
   GoodName,
   GoodItem,
   Cofidern,
+  ConteinerContacts,
+  SubmitConeiner,
+  InputQuantity,
+  InfoDiv,
+  Price,
+  TotalPrice,
 } from "./ShopingCart.styled";
 
 const ShopingCart = () => {
@@ -29,14 +35,14 @@ const ShopingCart = () => {
 
   return (
     <Conteiner>
-      <div>
+      <SubmitConeiner>
         {order.length ? (
-          <div>
+          <ConteinerContacts>
             <ContactInfo
               contactInfo={contactInfo}
               setContactInfo={setContactInfo}
             />
-          </div>
+          </ConteinerContacts>
         ) : (
           <></>
         )}
@@ -46,28 +52,30 @@ const ShopingCart = () => {
             order.map((good) => (
               <GoodItem key={good._id}>
                 <Image src={good.image} alt="" width={250} height={180} />
-                <GoodName>{good.titel}</GoodName>
-                <p>Price {good.price} UAH</p>
-                <input
-                  type="number"
-                  min="0"
-                  defaultValue="1"
-                  id={`quantityOf${good.titel}`}
-                  onChange={(e) =>
-                    handleQuantityChange(e, good.titel, order, setOrder)
-                  }
-                />
+                <InfoDiv>
+                  <GoodName>{good.titel}</GoodName>
+                  <Price>Price: {good.price} UAH</Price>
+                  <InputQuantity
+                    type="number"
+                    min="0"
+                    defaultValue="1"
+                    id={`quantityOf${good.titel}`}
+                    onChange={(e) =>
+                      handleQuantityChange(e, good.titel, order, setOrder)
+                    }
+                  />
+                </InfoDiv>
               </GoodItem>
             ))
           ) : (
             <p>The Cart is empty.</p>
           )}
         </OrderList>
-      </div>
+      </SubmitConeiner>
 
       {order.length ? (
         <Cofidern>
-          <p>Total: {totalPrice} UAH</p>
+          <TotalPrice>Total price: {totalPrice} UAH</TotalPrice>
           <SubmitButton
             onClick={() => {
               submitOrder(
