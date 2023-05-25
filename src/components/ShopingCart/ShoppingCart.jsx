@@ -65,7 +65,13 @@ const ShopingCart = () => {
           <p>Total: {totalPrice} UAH</p>
           <button
             onClick={() => {
-              submitOrder(order, contactInfo, setOrder, setContactInfo);
+              submitOrder(
+                order,
+                contactInfo,
+                setOrder,
+                setContactInfo,
+                totalPrice
+              );
             }}
           >
             Submit

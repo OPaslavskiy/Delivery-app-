@@ -1,5 +1,11 @@
 import { putOrder } from "../services/putOrder";
-export const submitOrder = (order, contactInfo, setOrder, setContactInfo) => {
+export const submitOrder = (
+  order,
+  contactInfo,
+  setOrder,
+  setContactInfo,
+  totalPrice
+) => {
   const arreyKeys = [];
   for (const key in contactInfo) {
     arreyKeys.push(contactInfo[key]);
@@ -11,6 +17,7 @@ export const submitOrder = (order, contactInfo, setOrder, setContactInfo) => {
     const orderForm = {
       ...contactInfo,
       order,
+      totalPrice,
     };
     setOrder([]);
     setContactInfo({
