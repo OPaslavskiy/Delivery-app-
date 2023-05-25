@@ -101,7 +101,7 @@ img {
   display: block;
 }
 `,hv=_o.div`
-  padding: 44px;
+  padding: 88px;
   display: flex;
   flex-direction: column;
 `,mv=_o.header`
@@ -110,6 +110,9 @@ img {
   justify-content: flex-start;
   padding-left: 64px;
   padding-right: 64px;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background: linear-gradient(
     114.99deg,
     #c1b9d4 -0.99%,
@@ -133,4 +136,4 @@ img {
   &:focus {
     color: #998787;
   }
-`,vv=()=>Z.jsxs(mv,{children:[Z.jsx(Va,{to:"/",children:"Shop"}),Z.jsx(Va,{to:"/shopingcart",children:"Shopping Cart"})]}),Ha=C.lazy(()=>od(()=>import("./Shops-4ff7c416.js"),["assets/Shops-4ff7c416.js","assets/submitOrder-6f790ee5.js"])),gv=C.lazy(()=>od(()=>import("./ShoppingCart-94f7a90f.js"),["assets/ShoppingCart-94f7a90f.js","assets/submitOrder-6f790ee5.js"]));function yv(){return Z.jsxs(Z.Fragment,{children:[Z.jsx(pv,{}),Z.jsx(vv,{}),Z.jsx(hv,{children:Z.jsx(C.Suspense,{fallback:Z.jsx("div",{children:"Loading subpage..."}),children:Z.jsxs(e0,{children:[Z.jsx(xl,{path:"/",element:Z.jsx(Ha,{})}),Z.jsx(xl,{path:"/shopingcart",element:Z.jsx(gv,{})}),Z.jsx(xl,{path:"*",element:Z.jsx(Ha,{})})]})})})]})}ui.createRoot(document.getElementById("root")).render(Z.jsx(rt.StrictMode,{children:Z.jsx(o0,{basename:"/delivery-app-/",children:Z.jsx(yv,{})})}));export{wv as c,Ud as g,_o as i,Z as j,C as r};
+`,vv=()=>Z.jsxs(mv,{children:[Z.jsx(Va,{to:"/",children:"Shop"}),Z.jsx(Va,{to:"/shopingcart",children:"Shopping Cart"})]}),Ha=C.lazy(()=>od(()=>import("./Shops-7a4e06ec.js"),["assets/Shops-7a4e06ec.js","assets/submitOrder-d849c029.js"])),gv=C.lazy(()=>od(()=>import("./ShoppingCart-8a3f0de8.js"),["assets/ShoppingCart-8a3f0de8.js","assets/submitOrder-d849c029.js"]));function yv(){return Z.jsxs(Z.Fragment,{children:[Z.jsx(pv,{}),Z.jsx(vv,{}),Z.jsx(hv,{children:Z.jsx(C.Suspense,{fallback:Z.jsx("div",{children:"Loading subpage..."}),children:Z.jsxs(e0,{children:[Z.jsx(xl,{path:"/",element:Z.jsx(Ha,{})}),Z.jsx(xl,{path:"/shopingcart",element:Z.jsx(gv,{})}),Z.jsx(xl,{path:"*",element:Z.jsx(Ha,{})})]})})})]})}ui.createRoot(document.getElementById("root")).render(Z.jsx(rt.StrictMode,{children:Z.jsx(o0,{basename:"/delivery-app-/",children:Z.jsx(yv,{})})}));export{wv as c,Ud as g,_o as i,Z as j,C as r};

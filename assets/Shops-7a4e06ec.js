@@ -1,4 +1,4 @@
-import{i as e,r as l,j as o}from"./index-620ad134.js";import{a as p,g as a}from"./submitOrder-6f790ee5.js";const x=e.button`
+import{i as e,r as l,j as o}from"./index-73a66e5c.js";import{a as p,g as a}from"./submitOrder-d849c029.js";const x=e.button`
   width: 250px;
   height: 120px;
   text-transform: uppercase;
@@ -49,7 +49,7 @@ import{i as e,r as l,j as o}from"./index-620ad134.js";import{a as p,g as a}from"
   border-radius: 8px;
   padding: 28px;
 
-  height: 760px;
+  height: 700px;
   overflow: auto;
 `,g=e.li`
   justify-content: flex-end;
