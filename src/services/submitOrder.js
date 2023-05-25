@@ -16,7 +16,7 @@ export const submitOrder = (
   } else {
     const orderForm = {
       ...contactInfo,
-      order,
+      order: order.map(({ _id, image, ...rest }) => rest),
       totalPrice,
     };
     setOrder([]);

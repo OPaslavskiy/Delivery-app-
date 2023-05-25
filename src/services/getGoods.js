@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://delivery-app-vnwc.onrender.com/api/";
+axios.defaults.baseURL = "https://delivery-app-server.onrender.com/api";
 
 export async function getGoods(category) {
   try {
