@@ -10,6 +10,7 @@ import {
   Image,
   GoodName,
   GoodButton,
+  Greeting,
 } from "./Shops.styled";
 
 const Shops = () => {
@@ -54,15 +55,19 @@ const Shops = () => {
         <ButtonList loadGoods={loadGoods} />
       </ShopsItem>
       <GoodsList>
-        {goods?.map((good) => (
-          <GoodItem key={good._id}>
-            <Image src={good.image} alt={good.titel} />
-            <GoodName>{good.titel}</GoodName>
-            <GoodButton type="button" onClick={() => addToBasket(good)}>
-              add to Cart
-            </GoodButton>
-          </GoodItem>
-        ))}
+        {goods.length ? (
+          goods?.map((good) => (
+            <GoodItem key={good._id}>
+              <Image src={good.image} alt={good.titel} />
+              <GoodName>{good.titel}</GoodName>
+              <GoodButton type="button" onClick={() => addToBasket(good)}>
+                Add to Cart
+              </GoodButton>
+            </GoodItem>
+          ))
+        ) : (
+          <Greeting>Choose a store to order delicious food.</Greeting>
+        )}
       </GoodsList>
     </Conteiner>
   );

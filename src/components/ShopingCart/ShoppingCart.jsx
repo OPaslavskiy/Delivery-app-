@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import { ContactInfo } from "../ContactInfo/ContactInfo";
 import { handleQuantityChange } from "../../services/";
 import { submitOrder } from "../../services";
+import {
+  Conteiner,
+  OrderList,
+  SubmitButton,
+  Image,
+  GoodName,
+  GoodItem,
+  Cofidern,
+} from "./ShopingCart.styled";
 
 const ShopingCart = () => {
   const arrayGoods = JSON.parse(localStorage.getItem("basket")) || [];
@@ -19,45 +28,47 @@ const ShopingCart = () => {
   }, 0);
 
   return (
-    <form>
-      {order.length ? (
-        <div>
-          <ContactInfo
-            contactInfo={contactInfo}
-            setContactInfo={setContactInfo}
-          />
-        </div>
-      ) : (
-        <></>
-      )}
-
+    <Conteiner>
       <div>
         {order.length ? (
-          order.map((good) => (
-            <div key={good._id}>
-              <img src={good.image} alt="" width={250} height={180} />
-              <p>{good.titel}</p>
-              <p>Price {good.price} UAH</p>
-              <input
-                type="number"
-                min="0"
-                defaultValue="1"
-                id={`quantityOf${good.titel}`}
-                onChange={(e) =>
-                  handleQuantityChange(e, good.titel, order, setOrder)
-                }
-              />
-            </div>
-          ))
+          <div>
+            <ContactInfo
+              contactInfo={contactInfo}
+              setContactInfo={setContactInfo}
+            />
+          </div>
         ) : (
-          <p>The Cart is empty.</p>
+          <></>
         )}
+
+        <OrderList>
+          {order.length ? (
+            order.map((good) => (
+              <GoodItem key={good._id}>
+                <Image src={good.image} alt="" width={250} height={180} />
+                <GoodName>{good.titel}</GoodName>
+                <p>Price {good.price} UAH</p>
+                <input
+                  type="number"
+                  min="0"
+                  defaultValue="1"
+                  id={`quantityOf${good.titel}`}
+                  onChange={(e) =>
+                    handleQuantityChange(e, good.titel, order, setOrder)
+                  }
+                />
+              </GoodItem>
+            ))
+          ) : (
+            <p>The Cart is empty.</p>
+          )}
+        </OrderList>
       </div>
 
       {order.length ? (
-        <div>
+        <Cofidern>
           <p>Total: {totalPrice} UAH</p>
-          <button
+          <SubmitButton
             onClick={() => {
               submitOrder(
                 order,
@@ -69,12 +80,12 @@ const ShopingCart = () => {
             }}
           >
             Submit
-          </button>
-        </div>
+          </SubmitButton>
+        </Cofidern>
       ) : (
         <></>
       )}
-    </form>
+    </Conteiner>
   );
 };
 
