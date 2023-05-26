@@ -61,3 +61,12 @@ export const LogoLink = styled(NavLink)`
     }
   }
 `;
+
+export const Line = styled.header`
+  width: 2px;
+  height: 40px;
+  background-color: #998787;
+  margin: 0 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+`;
