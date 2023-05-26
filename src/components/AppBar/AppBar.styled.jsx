@@ -31,9 +31,33 @@ export const LogoLink = styled(NavLink)`
   line-height: 1.2;
   padding-top: 15px;
   padding-bottom: 15px;
+  position: relative;
 
   &:hover,
   &:focus {
     color: #998787;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: transparent;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &.active {
+    color: #368639;
+
+    &::after {
+      background-color: #368639;
+      transform: scaleX(1);
+    }
   }
 `;
