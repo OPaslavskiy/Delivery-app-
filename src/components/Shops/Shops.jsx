@@ -89,7 +89,10 @@ const Shops = () => {
                 >
                   Add to Cart
                 </GoodButton>
-                <Hint show={hoveredButton === index} id="tooltip">
+                <Hint
+                  show={hoveredButton === index ? "true" : undefined}
+                  id="tooltip"
+                >
                   The item should be added in the Shopping Cart
                 </Hint>
               </GoodItem>
