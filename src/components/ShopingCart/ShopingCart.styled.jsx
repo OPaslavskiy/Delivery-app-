@@ -71,14 +71,14 @@ export const SubmitButton = styled.button`
 `;
 
 export const Image = styled.img`
-  width: 430px;
-  height: 320px;
+  width: 70%;
+  height: auto;
   object-fit: cover;
   border-radius: 15px;
 `;
 
 export const GoodName = styled.p`
-  font-size: 28px;
+  font-size: 22px;
   margin-top: 12px;
   margin-right: auto;
 `;
@@ -91,7 +91,7 @@ export const Cofidern = styled.div`
 `;
 
 export const InputQuantity = styled.input`
-  width: 160px;
+  width: 70%;
   padding: 5px 10px;
   font-size: 24px;
   border: 1px solid #ccc;
@@ -108,7 +108,7 @@ export const InfoDiv = styled.div`
 `;
 
 export const Price = styled.p`
-  font-size: 20px;
+  font-size: 18px;
 `;
 
 export const TotalPrice = styled.p`

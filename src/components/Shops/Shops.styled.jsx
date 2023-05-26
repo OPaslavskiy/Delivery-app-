@@ -31,7 +31,7 @@ export const GoodsList = styled.ul`
   border-radius: 8px;
   padding: 28px;
 
-  height: 700px;
+  height: 680px;
   overflow: auto;
 `;
 
