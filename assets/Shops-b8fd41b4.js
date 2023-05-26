@@ -1,4 +1,4 @@
-import{i as J,r as se,j as F,R as N}from"./index-c84c0062.js";import{r as Dt,h as Qt,i as We,a as Kt,g as ve}from"./hoist-non-react-statics.cjs-943cccac.js";const Jt=J.button`
+import{i as J,r as se,j as F,R as N}from"./index-c25b95ab.js";import{r as Dt,h as Qt,i as We,a as Kt,g as ve}from"./hoist-non-react-statics.cjs-0ec983cd.js";const Jt=J.button`
   width: 250px;
   height: 120px;
   text-transform: uppercase;
@@ -192,7 +192,7 @@ import{i as J,r as se,j as F,R as N}from"./index-c84c0062.js";import{r as Dt,h a
   justify-content: center;
   margin-top: 10%;
   margin-left: 25%;
-`,Fr=()=>F.jsx(Mr,{children:F.jsx(Lr,{visible:!0,height:"80",width:"80",ariaLabel:"blocks-loading",wrapperStyle:{},wrapperClass:"blocks-wrapper"})}),Yr=J.div`
+`,Fr=()=>F.jsx(Mr,{children:F.jsx(Lr,{visible:!0,height:"100",width:"100",ariaLabel:"blocks-loading",wrapperStyle:{},wrapperClass:"blocks-wrapper"})}),Yr=J.div`
   display: flex;
   gap: 32px;
   justify-content: flex-start;
