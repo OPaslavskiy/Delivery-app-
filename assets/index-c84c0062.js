@@ -132,9 +132,33 @@ img {
   line-height: 1.2;
   padding-top: 15px;
   padding-bottom: 15px;
+  position: relative;
 
   &:hover,
   &:focus {
     color: #998787;
   }
-`,gv=()=>Z.jsxs(vv,{children:[Z.jsx(Va,{to:"/",children:"Shop"}),Z.jsx(Va,{to:"/shopingcart",children:"Shopping Cart"})]}),Ha=C.lazy(()=>ud(()=>import("./Shops-e22d9fa9.js"),["assets/Shops-e22d9fa9.js","assets/hoist-non-react-statics.cjs-c9abbc11.js"])),yv=C.lazy(()=>ud(()=>import("./ShoppingCart-eb2cab38.js"),["assets/ShoppingCart-eb2cab38.js","assets/hoist-non-react-statics.cjs-c9abbc11.js"]));function wv(){return Z.jsxs(Z.Fragment,{children:[Z.jsx(hv,{}),Z.jsx(gv,{}),Z.jsx(mv,{children:Z.jsx(C.Suspense,{fallback:Z.jsx("div",{children:"Loading subpage..."}),children:Z.jsxs(t0,{children:[Z.jsx(xl,{path:"/",element:Z.jsx(Ha,{})}),Z.jsx(xl,{path:"/shopingcart",element:Z.jsx(yv,{})}),Z.jsx(xl,{path:"*",element:Z.jsx(Ha,{})})]})})})]})}ui.createRoot(document.getElementById("root")).render(Z.jsx(Je.StrictMode,{children:Z.jsx(i0,{basename:"/delivery-app-/",children:Z.jsx(wv,{})})}));export{ni as A,Co as B,Me as C,as as D,T0 as E,Ev as F,Sv as G,Qa as H,wd as K,pr as M,Je as R,j as W,kv as a,id as b,xv as c,ko as d,g0 as e,ht as f,hr as g,bn as h,_o as i,Z as j,I as k,B as l,L0 as m,P0 as n,k0 as o,S0 as p,v0 as q,C as r,R0 as s,re as t,rt as u,Cl as v,He as w,ru as x,cs as y,Yt as z};
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: transparent;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &.active {
+    color: #368639;
+
+    &::after {
+      background-color: #368639;
+      transform: scaleX(1);
+    }
+  }
+`,gv=()=>Z.jsxs(vv,{children:[Z.jsx(Va,{to:"/",children:"Shop"}),Z.jsx(Va,{to:"/shopingcart",children:"Shopping Cart"})]}),Ha=C.lazy(()=>ud(()=>import("./Shops-78797baa.js"),["assets/Shops-78797baa.js","assets/hoist-non-react-statics.cjs-943cccac.js"])),yv=C.lazy(()=>ud(()=>import("./ShoppingCart-212c2995.js"),["assets/ShoppingCart-212c2995.js","assets/hoist-non-react-statics.cjs-943cccac.js"]));function wv(){return Z.jsxs(Z.Fragment,{children:[Z.jsx(hv,{}),Z.jsx(gv,{}),Z.jsx(mv,{children:Z.jsx(C.Suspense,{fallback:Z.jsx("div",{children:"Loading subpage..."}),children:Z.jsxs(t0,{children:[Z.jsx(xl,{path:"/",element:Z.jsx(Ha,{})}),Z.jsx(xl,{path:"/shopingcart",element:Z.jsx(yv,{})}),Z.jsx(xl,{path:"*",element:Z.jsx(Ha,{})})]})})})]})}ui.createRoot(document.getElementById("root")).render(Z.jsx(Je.StrictMode,{children:Z.jsx(i0,{basename:"/delivery-app-/",children:Z.jsx(wv,{})})}));export{ni as A,Co as B,Me as C,as as D,T0 as E,Ev as F,Sv as G,Qa as H,wd as K,pr as M,Je as R,j as W,kv as a,id as b,xv as c,ko as d,g0 as e,ht as f,hr as g,bn as h,_o as i,Z as j,I as k,B as l,L0 as m,P0 as n,k0 as o,S0 as p,v0 as q,C as r,R0 as s,re as t,rt as u,Cl as v,He as w,ru as x,cs as y,Yt as z};
