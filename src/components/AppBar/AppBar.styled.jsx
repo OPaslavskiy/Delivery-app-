@@ -44,7 +44,7 @@ export const LogoLink = styled(NavLink)`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 4px;
     border-radius: 2px;
     background-color: transparent;
     transform-origin: left;
@@ -65,7 +65,7 @@ export const LogoLink = styled(NavLink)`
 export const Line = styled.header`
   width: 2px;
   height: 40px;
-  background-color: #998787;
+  background-color: #fff;
   margin: 0 12px;
   margin-top: 15px;
   margin-bottom: 15px;

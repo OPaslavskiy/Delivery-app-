@@ -30,7 +30,6 @@ export const GoodsList = styled.ul`
   border: 1px solid #5f4699;
   border-radius: 8px;
   padding: 28px;
-
   height: 680px;
   overflow: auto;
 `;
@@ -43,6 +42,7 @@ export const GoodItem = styled.li`
   border-radius: 8px;
   padding: 28px;
   display: flex;
+  position: relative;
 `;
 
 export const Image = styled.img`
@@ -77,6 +77,17 @@ export const GoodButton = styled.button`
   &:focus {
     background-color: #45a049;
   }
+`;
+
+export const Hint = styled.div`
+  display: ${(props) => (props.show ? "block" : "none")};
+  position: absolute;
+  top: 100%;
+  margin-top: -25px;
+  background-color: #93a894dc;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
 `;
 
 export const Greeting = styled.p`

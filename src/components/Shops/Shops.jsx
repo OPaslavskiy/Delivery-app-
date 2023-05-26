@@ -12,11 +12,13 @@ import {
   GoodName,
   GoodButton,
   Greeting,
+  Hint,
 } from "./Shops.styled";
 
 const Shops = () => {
   const [goods, setGoods] = useState([]);
   const [status, setStatus] = useState("stoped");
+  const [hoveredButton, setHoveredButton] = useState(null);
 
   function loadGoods(operation) {
     setStatus("pending");
@@ -56,6 +58,14 @@ const Shops = () => {
     }
   }
 
+  const handleMouseOver = (index) => {
+    setHoveredButton(index);
+  };
+
+  const handleMouseOut = () => {
+    setHoveredButton(null);
+  };
+
   return (
     <Conteiner>
       <ShopsItem>
@@ -67,13 +77,21 @@ const Shops = () => {
       ) : (
         <GoodsList>
           {goods.length ? (
-            goods?.map((good) => (
+            goods?.map((good, index) => (
               <GoodItem key={good._id}>
                 <Image src={good.image} alt={good.titel} />
                 <GoodName>{good.titel}</GoodName>
-                <GoodButton type="button" onClick={() => addToBasket(good)}>
+                <GoodButton
+                  type="button"
+                  onClick={() => addToBasket(good)}
+                  onMouseOver={() => handleMouseOver(index)}
+                  onMouseOut={handleMouseOut}
+                >
                   Add to Cart
                 </GoodButton>
+                <Hint show={hoveredButton === index} id="tooltip">
+                  The item should be added in the Shopping Cart
+                </Hint>
               </GoodItem>
             ))
           ) : (
