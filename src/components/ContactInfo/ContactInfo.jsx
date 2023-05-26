@@ -12,10 +12,10 @@ export const ContactInfo = ({ contactInfo, setContactInfo }) => {
 
   return (
     <Box
-      component="form"
       sx={{
         width: "660px",
         height: "120px",
+        paddingTop: "60px",
         gap: "40px",
         mt: 1,
         display: "flex",
